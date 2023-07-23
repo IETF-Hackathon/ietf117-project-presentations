@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IETF Hackathon - [FRR] </title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      div.left-column  { width: 49%; float: left; }
+      div.right-column { width: 49%; float: right; }
+
+      div.right-column ~ p { clear: both; }
+      div.right-column ~ ul { clear: both; }
+      div.my-footer {
+        border-top: 1px solid #ccc;
+        font-size: 10pt;
+        text-align: center;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        height: 30px;
+        width: 100%;
+      }
+      
+      div.my-footer p {
+        margin-top: 10px;
+        height: 30px;
+      }
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# IETF Hackathon
+      
+IETF 117
+      
+22-23 July 2023
+
+San Francisco
+
+      
+---
+
+# Hackathon Plan
+
+FRR doctors w/
+ - BGP Extensions for the Mobile User Plane (MUP) SAFI
+        
+<div class="my-footer"><p>IETF Hackathon - FRR </p></div>       
+---
+
+# What needed to get done
+        
+In IETF116 Hackathon, BGP-MUP SAFI introp was successful in many implementations
+https://datatracker.ietf.org/doc/draft-mpmz-bess-mup-safi/
+
+ - Arrcus
+ - Cisco 
+ - ExaBGP
+ - FRR *incomplete*
+ - Furukawa
+ - GoBGP
+        
+<div class="my-footer"><p>IETF Hackathon - FRR </p></div>       
+
+---
+
+# What got done
+        
+This branch is 5 commits ahead, 2054 commits behind FRRouting:master.
+  - brought this up-to-date, much closer to the goal of merging to master!
+Implementation was completely broken, bgpd process dies upon recieving certain types of route
+  - one of four types of routes in the draft is now implemented!
+        
+<div class="my-footer"><p>IETF Hackathon - FRR </p></div>       
+
+---
+ # Wrap up
+  ---  
+        
+        
+.left-column[ 
+#### Team members:
+        
+ - David 'equinox' Lamparter (equinox at opensourcerouting.org)
+ - Rodney Grimes
+ - Alistair Woodman (awoodman at netdef.org)
+        
+        ]
+.right-column[ 
+#### Other links:
+        
+ - Leo Fujita
+ - Takumi Ishihara
+        
+        ]
+
+
+<div class="my-footer"><p>IETF Hackathon - FRR </p></div>
+        
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
