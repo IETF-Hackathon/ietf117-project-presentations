@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IETF Hackathon - `cbor4dns`</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      div.left-column  { width: 49%; float: left; }
+      div.right-column { width: 49%; float: right; }
+
+      div.right-column ~ p { clear: both; }
+      div.right-column ~ ul { clear: both; }
+      div.my-footer {
+        border-top: 1px solid #ccc;
+        font-size: 10pt;
+        text-align: center;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        height: 30px;
+        width: 100%;
+      }
+      
+      div.my-footer p {
+        margin-top: 10px;
+        height: 30px;
+      }
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content {font-size: 30px;}
+      .remark-slide-number {font-size: 10pt;}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# IETF Hackathon - `cbor4dns`
+      
+IETF 117
+      
+22-23 July 2023
+
+San Francisco
+
+      
+---
+
+# Hackathon Plan
+
+Progress on `application/dns+cbor` encoder/decoder
+ - CBOR-based DNS message format for smaller messages in DoH and DoC
+ - Draft: [`draft-lenders-dns-cbor`](https://datatracker.ietf.org/doc/draft-lenders-dns-cbor/)
+ - Python-based implementation [`cbor4dns`](https://github.com/netd-tud/cbor4dns)
+    - [`dnspython`](https://dnspython.readthedocs.io) for the DNS part, <br/>
+      [`cbor2`](https://cbor2.readthedocs.io) for the CBOR part
+    - Encoder needed fixing
+    - Decoder needed implementing
+        
+<div class="my-footer"><p>IETF Hackathon - `cbor4dns` </p></div>       
+---
+
+# What got done
+        
+Done:
+ - Encoder (needs larger test vector)
+ - Finding a lib name (thanks Marco!)
+ - Going public: https://github.com/netd-tud/cbor4dns
+
+Almost done:
+ - Decoder: mostly done, packed CBOR support missing
+        
+<div class="my-footer"><p>IETF Hackathon - `cbor4dns` </p></div>       
+---
+        
+# What we learned
+
+ - Issues with existing draft:
+    - Section elision may need rethinking
+    - Dedicated specs for pseudo-RRs (e.g. OPT) may be needed
+        
+<div class="my-footer"><p>IETF Hackathon - `cbor4dns` </p></div>      
+---
+ # Wrap up
+  ---  
+<style>
+.right-column li {
+  font-size: 20px;
+}
+</style>
+        
+.left-column[ 
+#### Team members:
+        
+ - Martine Lenders
+        
+        ]
+
+.right-column[ 
+#### Notes and contacts:
+        
+ - Datatracker: https://datatracker.ietf.org/person/m.lenders@fu-berlin.de 
+ - Github: https://github.com/miri64
+ - Mastodon: https://ohai.social/@miri64
+
+        ]
+
+<div class="my-footer"><p>IETF Hackathon - `cbor4dns` </p></div>
+        
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
